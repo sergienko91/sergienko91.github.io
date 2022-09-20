@@ -369,6 +369,9 @@ body {
 }
 
 .video .video-box {
+  background-image: url(../images/wash1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #BDBDBD;
   max-width: 700px;
   margin: 40px auto;
@@ -873,6 +876,13 @@ body {
   }
   .video {
     padding: 20px 0;
+  }
+  
+}
+
+@media (max-width: 420px) {
+  .team-slider .team-box img {
+    width: auto;
   }
 }
 
