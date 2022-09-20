@@ -891,5 +891,8 @@ body {
   .video .video-box {
     min-height: 200px;
   }
+  .team-slider .team-box img {
+    width: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

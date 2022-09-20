@@ -31,7 +31,7 @@
                         <a href="tel:80005556666">8 (000) 123 45 67</a>
                         <a href="tel:80005556666">8 (000) 123 45 67</a>
                     </div>
-                    <a class="header__contacts-btn">Связаться со мной</a>
+                    <a class="header__contacts-btn" href="#toform">Связаться со мной</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                         <li>Опыт более 5 лет</li>
                     </ul>
 
-                    <a class="btn-red" href="#">
+                    <a class="btn-red" href="#toform">
                         Узнать стоимость
                     </a>
                 </div>
@@ -93,7 +93,7 @@
                     </ul>
                 </div>
             </div>
-            <a class="btn-white" href="#">
+            <a class="btn-white" href="#toform">
                 Узнать подробнее
             </a>
         </div>
@@ -147,7 +147,7 @@
                     <img src="images/video.svg">
                 </a>
             </div>
-            <a class="btn-red" href="#">
+            <a class="btn-red" href="#toform">
                 Записаться на консультацию
             </a>
         </div>
@@ -178,7 +178,7 @@
                         <p>Поклеили переднюю часть автомобиля, оклеили стойки, часть крыши, пороги, ручки, зеркала</p>
                     </div>
 
-                    <a class="btn-white" href="#">
+                    <a class="btn-white" href="#toform">
                         Узнать подробнее
                     </a>
                 </div>
@@ -254,7 +254,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="btn-red" href="#">Заказать</a>
+                    <a class="btn-red" href="#toform">Заказать</a>
                 </div>
 
                 <div class="price-inner__block">
@@ -263,7 +263,7 @@
                         <p>Оклейка передней части авто<br><br>
                         от <strong>3 000</strong> грн.</p>
                     </div>
-                    <a class="btn-red" href="#">Заказать</a>
+                    <a class="btn-red" href="#toform">Заказать</a>
                 </div>
 
                 <div class="price-inner__block">
@@ -273,13 +273,13 @@
                         <br><br>
                         от <strong>30 000</strong> грн.</p>
                     </div>
-                    <a class="btn-red" href="#">Заказать</a>
+                    <a class="btn-red" href="#toform">Заказать</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="toform">
         <div class="container">
             <form action="#">
                 <p>Оставьте данные, мы свяжемся с вами для консультации</p>
@@ -307,11 +307,22 @@
             
         </div>
     </footer>
+    <a href="sonata/index.html" style="display:none"></a>
 
 
 
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       
+      $('a').on('click', function (e) {
+          e.preventDefault();
+          $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top
+          }, 1000)
+      });
+    </script>
     <script src="js/slick.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
