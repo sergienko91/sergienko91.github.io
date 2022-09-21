@@ -464,3 +464,195 @@ body{
         padding: 0;
     }
 }
+form {
+    text-align: center;
+}
+.close-popup {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.close-popup::after, .close-popup::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transform-origin: left;
+    left: 0;
+}
+.close-popup::before {
+    transform: rotate(-45deg);
+    bottom: -1px;
+}
+.close-popup::after {
+    transform: rotate(45deg);
+}
+.popup {
+    width: 80%;
+    display: block;
+    background-color: #000000;
+    position: fixed;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    padding: 24px;
+    transition: all 0.3s;
+    max-width: 500px;
+}
+
+.popup input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.active-btn {
+    display: block;
+    transition: all 0.3s;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.blur {
+    transition: all 0.3s;
+}
+.blur-active {
+    filter: blur(5px);
+    transition: all 0.3s;
+}
+
+
+
+:root {
+	--hue: 223;
+	--bg1: hsl(var(--hue),10%,90%);
+	--bg2: hsl(var(--hue),10%,80%);
+	--fg1: hsl(var(--hue),10%,10%);
+	--fg2: hsl(var(--hue),10%,20%);
+	--primary1: hsl(var(--hue),90%,55%);
+	--primary2: hsl(var(--hue),90%,45%);
+	font-size: calc(20px + (40 - 20) * (100vw - 320px) / (1280 - 320));
+}
+.btn {
+    margin: 0 auto;
+    margin-top: 20px;
+	background-color: #690102;
+	border-radius: 1.5em;
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 3em;
+	transition: width 0.3s ease-in-out;
+}
+.btn:not(:disabled):active {
+	transform: translateY(0.1em);
+}
+.btn__text {
+	border-radius: inherit;
+	color: #fff;
+	display: inline-block;
+	transition:
+		background-color 0.15s linear,
+		color 0.15s 0.3s ease-in-out;
+	width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn:not(:disabled):focus .btn__text,
+.btn:not(:disabled):hover .btn__text {
+	background-color: #690102;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn__progress {
+	overflow: visible;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 3em;
+	height: 3em;
+	visibility: hidden;
+}
+.btn__progress-track {
+	r: 12px;
+	stroke: var(--bg2);
+	stroke-width: 24;
+}
+.btn__progress-fill {
+	stroke: #000;
+	stroke-dashoffset: 125.66;
+}
+.btn__progress-check {
+	stroke: hsl(0,0%,100%);
+	stroke-dashoffset: 34;
+}
+
+/* Both states */
+.btn--running,
+.btn--done {
+	outline: none;
+	pointer-events: none;
+	width: 3em;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.btn--running .btn__text,
+.btn--done .btn__text {
+	color: transparent;
+	transition:
+		background-color 0.3s ease-in-out,
+		visibility 0.3s steps(1);
+}
+.btn--running .btn__progress,
+.btn--done .btn__progress {
+	visibility: visible;
+}
+
+/* Running state */
+.btn--running .btn__text {
+	background-color: var(--bg2);
+	visibility: hidden;
+}
+.btn--running .btn__progress {
+	transition: visibility 0.3s 0.3s steps(1,start);
+}
+.btn--running .btn__progress-track {
+	r: 20px;
+	stroke-width: 8;
+	transition:
+		r 0.3s 0.3s ease-in-out,
+		stroke-width 0.3s 0.3s ease-in-out;
+}
+.btn--running .btn__progress-fill {
+	stroke-dashoffset: 0;
+	transition: stroke-dashoffset 2s 0.6s linear;
+}
+
+/* Done state */
+.btn--done .btn__progress-track {
+	stroke: #690102;
+	transition:
+		r 0.3s ease-in-out,
+		stroke-width 0.3s ease-in-out;
+}
+.btn--done .btn__progress-check {
+	stroke-dashoffset: 0;
+	transition: stroke-dashoffset 0.3s 0.3s ease-out;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg1: hsl(var(--hue),10%,10%);
+		--bg2: hsl(var(--hue),10%,20%);
+		--fg1: hsl(var(--hue),10%,90%);
+		--fg2: hsl(var(--hue),10%,80%);
+	}
+}
