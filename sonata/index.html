@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css"/>
+  
 </head>
 <body>
   <div class="blur">
@@ -27,7 +29,7 @@
             <div></div>
           </div>
         </div>
-        <div class="header-content">
+        <div class="header-content wow fadeInRightBig">
           <h1 class="header-content__title">
             Sonata
           </h1>
@@ -69,7 +71,7 @@
       <div class="container">
         <div class="statistics-items">
   
-          <div class="statistics-item">
+          <div class="statistics-item wow flipInX">
             <div class="statistics-item__title">
               Двигатель
             </div>
@@ -81,7 +83,7 @@
             </div>
           </div>
   
-          <div class="statistics-item">
+          <div class="statistics-item wow flipInX">
             <div class="statistics-item__title">
               Расход
             </div>
@@ -93,7 +95,7 @@
             </div>
           </div>
   
-          <div class="statistics-item">
+          <div class="statistics-item wow flipInX">
             <div class="statistics-item__title">
               Скорость
             </div>
@@ -120,7 +122,7 @@
         <div class="advantages-inner">
           <div class="advantages-inner__row">
   
-            <div class="advantages-descr">
+            <div class="advantages-descr wow bounceInLeft">
               <div class="advantages__title">
                 Самые высокие стандарты безопасности.
               </div>
@@ -131,17 +133,17 @@
               </div>
             </div>
   
-            <div class="advantages__img">
+            <div class="advantages__img wow bounceInRight">
               <img src="img/advantages-1.jpg" alt="">
             </div>        
           </div>
   
           <div class="advantages-inner__row advantages-inner__row--mobile">
-            <div class="advantages__img">
+            <div class="advantages__img  wow bounceInLeft">
               <img src="img/advantages-2.jpg" alt="">
             </div> 
   
-            <div class="advantages-descr">
+            <div class="advantages-descr  wow bounceInRight">
               
               <div class="advantages__text">
                 <ul>
@@ -171,16 +173,16 @@
         </div>
         <div class="design-row">
           <div class="design-row__item">
-            <div class="design-row__item-num">01</div>
-            <div class="design-row__item-text">
+            <div class="design-row__item-num wow bounceInDown">01</div>
+            <div class="design-row__item-text wow bounceInLeft">
             Адаптивный круиз-контроль с системой Старт-Стоп автоматически поддерживает 
             скорость и дистанцию до впереди идущего автомобиля вплоть до полной 
             остановки (длительностью до 3-х секунд).            
             </div>
           </div>
           <div class="design-row__item">
-            <div class="design-row__item-num">02</div>
-            <div class="design-row__item-text">
+            <div class="design-row__item-num wow bounceInDown">02</div>
+            <div class="design-row__item-text wow bounceInRight">
             Система безопасного выхода предотвращает разблокировку замков пассажирских 
             дверей при обнаружении приближающегося сзади (в слепой зоне) транспорта.            
             </div>
@@ -228,7 +230,7 @@
   
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+ 
   <script>
      $('.button').on('click', function(){
         $('.popup').addClass('active-btn');
@@ -243,5 +245,10 @@
   <script src="js/btn.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  
 </body>
 </html>
