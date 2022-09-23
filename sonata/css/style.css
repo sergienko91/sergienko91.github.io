@@ -220,7 +220,6 @@ body{
 .statistics-item__num span{
     font-size: 24px;
     line-height: 28px;
-    /* margin-left: -20px; */
 }
 
 .statistics-item__descr {
@@ -253,7 +252,6 @@ body{
     font-size: 36px;
     line-height: 42px;
     color: #b70021;
-    position: absolute;
     top: 0;
     max-width: 400px;
 }
@@ -429,9 +427,6 @@ body{
         font-size: 20px;
         line-height: 24px;
     }
-    /* .logo img{
-        width: 200px;
-    } */
     .header-content__title{
         font-size: 76px;
         margin-top: 20px;
@@ -657,21 +652,3 @@ form {
 	}
 }
 
-
-
-
-
-
-
-.fadeInRightBig {
-    -webkit-animation-name: fadeInRightBig;
-    animation-name: fadeInRightBig;
-  }
-
-.flipInX {
-    -webkit-backface-visibility: visible !important;
-    -ms-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-    -webkit-animation-name: flipInX;
-    animation-name: flipInX;
-  }
